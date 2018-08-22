@@ -71,16 +71,3 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.test-div {
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
-.test-div-img {
-  height: 500px;
-  background: 
-    linear-gradient(
-      to bottom right,
-    rgba(244, 156, 54, 70%),
-    rgba(185, 19, 6, 70%)),
-    url(../img/nat-1-large.jpg);
-}
