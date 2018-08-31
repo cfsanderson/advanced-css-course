@@ -98,3 +98,17 @@ Source Order
 
 ![](./css-value-processing.png)
 
+
+
+-----  
+### How CSS Renders a Website
+
+1. The Box Model ![box sizing](./box-sizing-border-box.png)
+2. Box Types: ![box types](./box-types.png)
+  1. Inline
+  2. Block-level
+  3. inline-block
+3. Positioning Schemes: ![positioning schemes](./positioning-schemes.png)
+  1. normal flow
+  2. absolute positioning
+  3. floats
