@@ -112,3 +112,30 @@ Source Order
   1. normal flow
   2. absolute positioning
   3. floats
+
+
+-----
+### CSS Architecture, Components, and BEM  
+
+HA! - he directly quotes Atomic Design
+
+THINK => BUILD => ARCHITECT
+
+#### BEM - Block Element Modifier
+- **Block:** stand alone component that is meaningful on it's own
+- **Element:** part of a block that has no standalone meaning
+- **Modifier:** a different version of a block or an element.
+
+#### The 7-1 Pattern
+- 7 different folders for parital Sass files, and
+- 1 main Sass file to import all the other files into
+- a compiled CSS styleshett
+Folders
+- 1) base/
+- 2) components/
+- 3) layout/
+- 4) pages/
+- 5) themes/
+- 6) abstracts/
+- 7) vendors/
+
