@@ -139,3 +139,25 @@ Folders
 - 6) abstracts/
 - 7) vendors/
 
+
+-----
+### Implementing BEM (3/21)
+
+
+-----
+### Sass and NPM (4/22-23)
+Sass is a CSS preprocessor that compiles Sass code to regular CSS.  
+
+Main features
+- Variables
+- Nesting
+- Operators
+- Partials and imports
+- Mixins - reusable pieces of CSS
+- Functions - similar to mixins, with the deff that they produce a value that can be used.
+- Extends - to make diff selectors inherit declarations that are common to all of them
+- Control directives - for writing complex code using conditionals and loops (not covered here)  
+
+-----
+### Sass Mixins, Extends, and Functions  
+[Tutorial done in Codepen](https://codepen.io/cfsanderson/pen/bxqbVd)
