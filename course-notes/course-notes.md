@@ -174,4 +174,8 @@ Main features
 - make a `sass` directory.
 - create a `main.scss` file in the `sass` directory
 - copy current CSS code from `css/style.css` to `main.scss`
-- 
+- add `"compile:sass": "node-sass sass/main.scss css/style.css -w"` to the `scripts` section of the `package.json`
+  - this compiles the main.scss file code to style.css and the `-w` flag watches for changes.
+- `npm install live-server -g` installs live-server globally
+  - in another terminal window run `live-server` and it will start the site at port 8080
+  - 
