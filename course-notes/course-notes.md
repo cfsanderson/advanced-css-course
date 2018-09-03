@@ -178,4 +178,15 @@ Main features
   - this compiles the main.scss file code to style.css and the `-w` flag watches for changes.
 - `npm install live-server -g` installs live-server globally
   - in another terminal window run `live-server` and it will start the site at port 8080
-  - 
+
+run `live-server` in one terminal instance and `npm compile:sass` in another
+
+-----
+## Section 5 - Sass part 2  
+
+### lecture 30-31 - converting normal CSS to nested Sass with variables.
+
+### lecture 32 - implementing the 7-1 principle for organization of files
+
+### lecture 33 - Review of Reponsive Design Principles  
+![Review: Basic Responsive Design Principles - slide](./responsive-design-principles.png)
