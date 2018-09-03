@@ -145,7 +145,10 @@ Folders
 
 
 -----
-### Sass and NPM (4/22-23)
+## Section 4 - Introduction to Sass and NPM  
+
+-----  
+### Introduction (4/22-23)
 Sass is a CSS preprocessor that compiles Sass code to regular CSS.  
 
 Main features
@@ -159,5 +162,12 @@ Main features
 - Control directives - for writing complex code using conditionals and loops (not covered here)  
 
 -----
-### Sass Mixins, Extends, and Functions  
+### Sass Mixins, Extends, and Functions (4/25)
 [Tutorial done in Codepen](https://codepen.io/cfsanderson/pen/bxqbVd)
+
+-----
+### NPM Packages - Installing Sass Locally  
+
+- `node -v` to check if installed
+- `npm init` opens walkthrough to create a `package.json` file
+- `npm install node-sass --save-dev` = installs the node-sass dependencies and `--save-dev` specifies it as a development only dependency.
