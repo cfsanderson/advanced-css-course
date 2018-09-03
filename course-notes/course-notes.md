@@ -171,3 +171,7 @@ Main features
 - `node -v` to check if installed
 - `npm init` opens walkthrough to create a `package.json` file
 - `npm install node-sass --save-dev` = installs the node-sass dependencies and `--save-dev` specifies it as a development only dependency.
+- make a `sass` directory.
+- create a `main.scss` file in the `sass` directory
+- copy current CSS code from `css/style.css` to `main.scss`
+- 
