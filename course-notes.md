@@ -8,10 +8,13 @@ I started back over and plan to cruise back through the course.
 ## NOTES
 Resetting or normalizing CSS is less important now with better implementation in browsers. Basic reset should only need...
 ```css
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    / https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 }
 ```  
 
@@ -95,4 +98,13 @@ Specificity
 
 Source Order
 - duh, order
+
+### Convert to REM (lecture 18)
+
+### Visual Formatting Model (lecture 19)
+- box model
+  - [box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+
+
+### Implementing BEM (lecture 20 and 21)
 
