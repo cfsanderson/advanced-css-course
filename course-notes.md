@@ -22,7 +22,7 @@ When working with a background image, don't forget to set the background-positio
 ```css
 div {
   background-size: cover;
-  background-position: top; / sets the 
+  background-position: top;
 }
 ```  
 
@@ -97,15 +97,104 @@ Specificity
 - Elements, pseudo-elements
 
 Source Order
-- duh, order
+- duh, order  
+
 
 ### Convert to REM (lecture 18)
+```scss
+html {
+  font-size: 62.5%; // converts default 16px font-size of most browsers to 10px
+}
+
+p { font-size: 1.6rem; /* equals 16px */  }
+```
+After this reset, all future `px` declarations are given in multiples of `.1rem`.  
+
 
 ### Visual Formatting Model (lecture 19)
 - box model
-  - [box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+  - [box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)  
 
 
 ### Implementing BEM (lecture 20 and 21)
 
-`block__element--modifier`
+`block__element--modifier`  
+
+
+### Mixins, Functions, and Extends
+[Codepen with examples from course](https://codepen.io/cfsanderson/pen/yGPNwN?editors=1100)
+
+**MIXIN**
+Works like a variable that is reusable throughout code.
+```scss
+/* without a variable */
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* with a variable */
+@mixin style-link-text($color) {
+	color: $color;
+}
+
+nav {
+  margin: 3rem;
+  background-color: $color-primary;
+
+  @include clearfix; //without passing in a variable
+  @include style-link-text($color-text-light) //passing in a variable - similar to a function
+}
+```
+
+**FUNCTION**
+```scss
+@function divide($a, $b) {
+	@return $a / $b;
+}
+
+nav {
+  margin: divide(60, 2) * 1px;
+}
+
+// silly use of a function but works
+```
+
+**EXTENDS**
+Extends is similar to @mixin but instead of compilng the declarations into the selector (mixing them in), it makes a whole new selector with the given declarations.
+
+```scss
+%btn-placeholder {
+	padding: 1rem;
+	display: inline-block;
+	text-align: center;
+	border-radius: 10rem;
+	width: $width-button;	
+	@include style-link-text($color-text-light);	
+}
+
+.btn--main {
+	&:link {
+    @extend %btn-placeholder;
+  }
+}
+```
+This would compile to something like...
+```scss
+.btn--main:link {
+  padding: 10px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 100px;
+	width: 25px;	
+	color: #fff;
+}
+```  
+
+### Installing and Compiling Sass 
+- `npm init` which starts walkthrough to initialize a `package.json`
+- `npm install node-sass --save-dev` installs `node-sass` as a dev dependency in `package.json`
+- Add `"scripts": { "compile:sass": "node-sass sass/main.scss css/style.css"}`
