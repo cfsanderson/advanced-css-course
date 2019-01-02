@@ -1,6 +1,17 @@
 # Advanced CSS and Sass Course on [Udemy](https://www.udemy.com/advanced-css-and-sass/)
-I started back over and plan to cruise back through the course.
+This is my second run go through the course. 
 
+From the root of each project run 
+- `live-server` in one terminal and 
+- `npm run compile:sass` in another.
+
+### Table of Contents
+- [Section 2](#section-2)
+- [Section 3](#section-3)
+- [Section 4](#section-4)
+- [Section 5](#section-5)
+
+-----------------------
 ## Section 2
 
 - `clip-path` 
@@ -33,6 +44,9 @@ div {
 }
 ```
 
+([Back to Top](#table-of-contents))  
+
+-----------------------
 ## Section 3
 
 ### 3 Pillars of Good HTML and CSS (#13)
@@ -118,8 +132,13 @@ After this reset, all future `px` declarations are given in multiples of `.1rem`
 
 ### Implementing BEM (lecture 20 and 21)
 
-`block__element--modifier`  
+`block__element--modifier`   
 
+
+([Back to Top](#table-of-contents))  
+
+-----------------------
+## Section 4
 
 ### Mixins, Functions, and Extends
 [Codepen with examples from course](https://codepen.io/cfsanderson/pen/yGPNwN?editors=1100)
@@ -138,7 +157,7 @@ Works like a variable that is reusable throughout code.
 
 /* with a variable */
 @mixin style-link-text($color) {
-	color: $color;
+  color: $color;
 }
 
 nav {
@@ -153,7 +172,7 @@ nav {
 **FUNCTION**
 ```scss
 @function divide($a, $b) {
-	@return $a / $b;
+  @return $a / $b;
 }
 
 nav {
@@ -168,7 +187,7 @@ Extends is similar to @mixin but instead of compilng the declarations into the s
 
 ```scss
 %btn-placeholder {
-	padding: 1rem;
+  padding: 1rem;
 	display: inline-block;
 	text-align: center;
 	border-radius: 10rem;
@@ -177,7 +196,7 @@ Extends is similar to @mixin but instead of compilng the declarations into the s
 }
 
 .btn--main {
-	&:link {
+  &:link {
     @extend %btn-placeholder;
   }
 }
@@ -197,4 +216,41 @@ This would compile to something like...
 ### Installing and Compiling Sass 
 - `npm init` which starts walkthrough to initialize a `package.json`
 - `npm install node-sass --save-dev` installs `node-sass` as a dev dependency in `package.json`
-- Add `"scripts": { "compile:sass": "node-sass sass/main.scss css/style.css"}`
+- Add `"scripts": { "compile:sass": "node-sass sass/main.scss css/style.css"}` to `package.json`  
+
+
+([Back to Top](#table-of-contents))  
+
+-----------------------
+## Section 5
+
+### lecture 30 = intro  
+
+### lecture 31 - converting CSS to Sass  
+
+### lecture 32 - implementing the 7-1 CSS Architecture  
+- abstracts
+- base
+- components
+- layout
+- pages
+- themes (not included but would include dark theme etc.)
+- vendors (not included but would include 3rd party frameworks like bootstrap)
+  
+### lecture 33 - review basic principles of responsive design and layout types  
+1 - fluid grids and layouts
+2 - flexible/responsive images
+3 - media queries
+
+Natours - float layout (b/c still maintainable)
+Nexter - flexbox
+Trillo - grid  
+
+### lecture 34 - building a custom grid with floats
+stopped at 25
+
+### lecture 35 - building the about section part 1
+
+### lecture 35 - building the about section part 2
+
+### lecture 35 - building the about section part 3
