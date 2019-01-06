@@ -249,8 +249,5 @@ Trillo - grid
 ### lecture 34 - building a custom grid with floats
 stopped at 25
 
-### lecture 35 - building the about section part 1
+### lecture 35-37 - building the about section part 1
 
-### lecture 35 - building the about section part 2
-
-### lecture 35 - building the about section part 3
