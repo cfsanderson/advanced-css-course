@@ -251,3 +251,6 @@ stopped at 25
 
 ### lecture 35-37 - building the about section part 1
 
+### lecture 39
+
+TODO - make variables for box shadows and replace throughout
