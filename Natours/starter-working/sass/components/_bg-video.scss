@@ -1,0 +1,17 @@
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  // z-index: -1;
+  opacity: .15;
+
+  &__content {
+    height: 100%;
+    width: 100%; 
+  }
+}
+
+// stopped at 8:48 on lecture 44
+// background video did not require z-index but now button is not clickable. Set higher z-index on it?
