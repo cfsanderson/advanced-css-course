@@ -255,5 +255,3 @@ stopped at 25
 
 TODO - make variables for box shadows and replace throughout
 
-- stopped at 8:48 on lecture 44 (background video)
-- background video did not require z-index but now button is not clickable. Set higher z-index on it?
