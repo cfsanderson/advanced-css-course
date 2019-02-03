@@ -255,3 +255,4 @@ stopped at 25
 
 TODO - make variables for box shadows and replace throughout
 
+**Stopped 2/3 at 11:19 on lecture 48**
