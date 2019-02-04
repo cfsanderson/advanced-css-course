@@ -138,10 +138,7 @@
 
     // FRONT CARD SIDE STYLING
   &__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include center-vertical-and-horizontal;
     width: 90%;
     text-align: center;
   }

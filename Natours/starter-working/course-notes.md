@@ -255,4 +255,4 @@ stopped at 25
 
 TODO - make variables for box shadows and replace throughout
 
-**Stopped 2/3 at 11:19 on lecture 48**
+**Stopped 2/4 at 8:00 on lecture 50**
