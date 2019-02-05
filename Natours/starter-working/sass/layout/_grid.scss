@@ -5,6 +5,14 @@
   // .row:not:last-child = everything EXCEPT the last-child
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tabPort) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tabPort) {
+    max-width: 50rem;
   }
 
   @include clearfix;
@@ -15,6 +23,15 @@
     
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tabPort) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tabPort) {
+      width: 100% !important;
     }
   }
 

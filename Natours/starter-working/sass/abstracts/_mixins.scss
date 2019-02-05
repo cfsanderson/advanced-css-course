@@ -20,3 +20,41 @@
 @mixin easeInOutBack {
   transition: all .6s cubic-bezier(0.68, -0.55, 0.2, 1);
 }
+
+/*--------------------------------
+MEDIA QUERY MANAGER
+
+0 - 600px:       Phone
+600 - 900px:     Tablet portrait
+900 - 1200px:    Tablet landscape
+1200 - 1800:     normal styles already apply
+1800px +:        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tabPort
+- tabLand
+- bigDesktop
+
+`em` and `rem` in media queries are NOT affected by the change to the root font-size of 63.5%.
+`em` are the better unit to use in this circumstance but conversions from px must be calculated manually.
+
+ORDER:
+Base & typography > general layout & grid > page layout > components
+
+--------------------------------*/ 
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content }; // < 600px
+  }
+  @if $breakpoint == tabPort {
+    @media (max-width: 56.25em) { @content }; // < 900px
+  }
+  @if $breakpoint == tabLand {
+    @media (max-width: 75em) { @content };  // < 1200px
+  }
+  @if $breakpoint == bigDesktop {
+    @media (min-width: 112.5em) { @content }; // > 1800px 
+  }
+}

@@ -1,3 +1,7 @@
+TODO
+- make variables for box shadows and replace throughout
+- 
+
 # Advanced CSS and Sass Course on [Udemy](https://www.udemy.com/advanced-css-and-sass/)
 This is my second run go through the course. 
 
@@ -246,11 +250,24 @@ Natours - float layout (b/c still maintainable)
 Nexter - flexbox
 Trillo - grid  
 
-### lecture 34 - building a custom grid with floats
-stopped at 25
 
-### lecture 35-37 - building the about section part 1
+-----------------------
+## Section 6
 
-### lecture 39
+### lecture 55
+Advanced Responsive Design
 
-TODO - make variables for box shadows and replace throughout
+Desktop vs. Mobile first
+- **desktop first** starts by writing styles to suit desktop widths first and then writing media queries using `@media (max-width: 600px) { etc...}` to shrink to smaller sizes
+  - this may be easier to learn initially
+- **mobile first** does the opposite of :point-up: 
+  - forces us to reduce websites and apps to the absolute esssentials
+
+[See page 109 of course slides]
+
+- `max-width: 600px` checks to see if `width <= 600px` and if it is, then applies the new rule. So the maximum width at which the new rule would apply is 600px.
+  - if `max-width` is set to `900px` and the screen is `500px`, then BOTH the 600 and 900 width rules would apply
+- `min-width: 600px` checks to see if `width >= 600px` and if it is, applies the new rule.
+  - if `min-width` is set to 900 and the screen is 500px, then the rules will not apply.
+
+[See page 112 of course slides - "Good" breakpoints]
