@@ -22,7 +22,7 @@
   }
 
   &__text-box {
-    @include center-vertical-and-horizontal;
+    @include absoluteCenter;
     text-align: center;
   }
 }

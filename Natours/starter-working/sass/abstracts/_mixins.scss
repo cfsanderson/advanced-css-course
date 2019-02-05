@@ -6,9 +6,17 @@
   }
 }
 
-@mixin center-vertical-and-horizontal {
+@mixin absoluteCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin easeInOutQuint {
+  transition: transform .7s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@mixin easeInOutBack {
+  transition: all .6s cubic-bezier(0.68, -0.55, 0.2, 1);
 }

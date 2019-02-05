@@ -254,5 +254,3 @@ stopped at 25
 ### lecture 39
 
 TODO - make variables for box shadows and replace throughout
-
-**Stopped 2/4 at 8:00 on lecture 50**
