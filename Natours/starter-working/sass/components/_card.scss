@@ -136,7 +136,7 @@
     }
   }
 
-    // FRONT CARD SIDE STYLING
+// FRONT CARD SIDE STYLING
   &__cta {
     @include absoluteCenter;
     width: 90%;
@@ -157,5 +157,55 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+// .card media queries
+  @include respond(tabPort) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        // padding: 4rem 0;
+        // margin: -4rem 0 0 0;
+
+        -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+    
+    &__details {
+      padding: 1rem 3rem;
+    }
+    
+    // .card:hover .card__side
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+    
+    // FRONT CARD SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 5rem;
+    }   
   }
 }
