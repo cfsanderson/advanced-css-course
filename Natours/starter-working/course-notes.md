@@ -1,6 +1,9 @@
 TODO
 - make variables for box shadows and replace throughout
-- 
+- rework the `_popup.scss` modal to be responsive
+  - line 9 of `_popup.scss` (`opacity: 0;`) is commented out so that the modal will always show and is workable.
+  - added lines 366 & 367 to create divs to use with background images for side pics to control size better.
+  - added lines 32-41 in `_popup.scss` to try and style but not working
 
 # Advanced CSS and Sass Course on [Udemy](https://www.udemy.com/advanced-css-and-sass/)
 This is my second run go through the course. 
