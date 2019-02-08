@@ -1,6 +1,6 @@
 TODO
-- make variables for box shadows and replace throughout
-- rework the `_popup.scss` modal to be responsive
+- [ ] make variables for box shadows and replace throughout
+- [ ] rework the `_popup.scss` modal to be responsive
   - line 9 of `_popup.scss` (`opacity: 0;`) is commented out so that the modal will always show and is workable.
   - added lines 366 & 367 to create divs to use with background images for side pics to control size better.
   - added lines 32-41 in `_popup.scss` to try and style but not working
@@ -274,3 +274,9 @@ Desktop vs. Mobile first
   - if `min-width` is set to 900 and the screen is 500px, then the rules will not apply.
 
 [See page 112 of course slides - "Good" breakpoints]
+
+### lecture 60 Responsive Images
+- **Resolution switching** = decrease image resolution on smaller screens
+- **Density switching** = @1x for low-res, @2x for high-res
+- **Art direction** = completely different image to accomodate the layout
+

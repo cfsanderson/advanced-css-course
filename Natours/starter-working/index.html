@@ -72,9 +72,31 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
+                            <!-- `srcset` specifies different sources and their widths in pixels,
+                                 `sizes` gives breakpoints and a default 300px
+                                `src` is the default for old browsers 
+                                 https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+                            -->
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 alt="photo 1"
+                                 class="composition__photo composition__photo--p1"
+                                 src="img/nat-1-large.jpg">
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 alt="photo 2"
+                                 class="composition__photo composition__photo--p2"
+                                 src="img/nat-2-large.jpg">
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 alt="photo 3"
+                                 class="composition__photo composition__photo--p3"
+                                 src="img/nat-3-large.jpg">
+
+                            <!-- Original non-responsive version
                             <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                         </div>
                     </div>
                 </div>
@@ -335,7 +357,15 @@
 
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+                <!--example of `srcset` for density switching
+                    <img srcset="img/logo-green-1x 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">
+                -->
+                
+                <!-- art direction AND density switching technique -->
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo" src="img/logo-green-2x.png">
+                </picture>
             </div>
 
             <div class="row">
@@ -361,10 +391,10 @@
         <div class="popup" id="popup">
             <div class="popup__content">
                 <div class="popup__left">
-                    <!-- <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img"> -->
-                    <div alt="Tour photo" class="popup__img1"></div>
-                    <div alt="Tour photo" class="popup__img2"></div>
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                    <!-- <div alt="Tour photo" class="popup__img1">hello</div>
+                    <div alt="Tour photo" class="popup__img2">world</div> -->
                 </div>
                 <div class="popup__right">
                     <a href="#section-tours" class="popup__close">&times;</a>

@@ -6,13 +6,13 @@
   left: 0;
   background-color: rgba($color-black, .85);
   z-index: 1000;
-  // opacity: 0;
+  opacity: 0;
   visibility: hidden;
   transition: all .3s;
 
   &__content {
     @include absoluteCenter;
-    width: 75%;
+    width: 85%;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, .2);
     border-radius: 3px;
@@ -25,19 +25,38 @@
 
   &__left {
     width: 33.333333%;
+    height: 100%;
+    // background-color: orangered;
     display: table-cell;
-    background-color: orangered;
   }
-  
+
   &__img1 {
-    height: 50px;
-    display: table-cell;
-    background-color: yellowgreen;
+    height: 50%;
+    background-image: 
+        linear-gradient(to right bottom, $color-primary, $color-primary-light),
+        url(../img/nat-5.jpg);
+    float: left;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
 
   &__img2 {
+        background-image: 
+        linear-gradient(to right bottom, $color-primary, $color-primary-light),
+        url(../img/nat-5.jpg);
     height: 50%;
-    display: table-cell;
+    // display: inline-block;
+    float: left;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
 
   &__right {
