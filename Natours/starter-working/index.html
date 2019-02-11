@@ -72,9 +72,15 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <!-- `srcset` specifies different sources and their widths in pixels,
-                                 `sizes` gives breakpoints and a default 300px
-                                `src` is the default for old browsers 
+                            <!-- This is an example of resolution switching for responsive images.
+                                - `srcset` specifies different sources and their widths in pixels (300w and 1000w respectively),
+                                - `sizes`
+                                    1) gives media query breakpoints (e.g. `max-width: 900px`)
+                                    2) the estimated percentage of the total width at the media query that the image will occupy (e.g. if image is 171px wide and 900px is `max-width` = `20vw` (171/900 = .20))
+                                    3) and the default if none of the other widths apply (e.g. 300px)
+                                - `src` is the default for old browsers 
+                                This tells the browser which image to use at which resolution.
+                                The "art direction" method is employed for the logo image in the footer.
                                  https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
                             -->
                             <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
@@ -363,8 +369,19 @@
                 
                 <!-- art direction AND density switching technique -->
                 <picture class="footer__logo">
-                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
-                    <img srcset="img/logo-green-1x 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo" src="img/logo-green-2x.png">
+                    <!--
+                        The `source` tag allows to set a media query that will switch to this image when the media width is in effect (on smaller screens in example below).
+                        The `srcset` works the same as in the <img> tag below. -->
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                            media="(max-width: 37.5em)">
+                    <!--
+                        The `srcset` attribute here is setting the image for different densities which includes the path to the images, directly followed by a density descriptor (1x, 2x, etc.).
+                        The `src` attribute sets the fallback image for older browsers.
+                    -->
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+                         alt="Full logo"
+                         class="footer__logo"
+                         src="img/logo-green-2x.png">
                 </picture>
             </div>
 

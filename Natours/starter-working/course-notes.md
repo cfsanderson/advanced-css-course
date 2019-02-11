@@ -276,7 +276,24 @@ Desktop vs. Mobile first
 [See page 112 of course slides - "Good" breakpoints]
 
 ### lecture 60 Responsive Images
+
 - **Resolution switching** = decrease image resolution on smaller screens
-- **Density switching** = @1x for low-res, @2x for high-res
+- **Density switching** = (special case of resolution switching) supplies @1x for low-res, @2x for high-res (retina) screens
 - **Art direction** = completely different image to accomodate the layout
 
+#### Responsive images in HTML (lectures 61 & 62)
+The `.section-about` includes an example of resolution switching for responsive images.
+- `srcset` specifies different sources and their widths in pixels (300w and 1000w respectively),
+- `sizes`
+  1) gives media query breakpoints (e.g. `max-width: 900px`)
+  2) the estimated percentage of the total width at the media query that the image will occupy (e.g. if image is 171px wide and 900px is `max-width` = `20vw` b/c 171/900 = .20 )
+  3) and the default if none of the other widths apply (e.g. 300px)
+- `src` is the default for old browsers
+This tells the browser which image to use at which resolution.
+The "art direction" method is employed for the logo image in the footer.
+
+[MDN tutorial for responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+
+#### Responsive images in CSS (lecture 63)
+This technique uses media queries to choose 
+(see _header.scss for example code - line 14)
