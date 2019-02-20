@@ -16,7 +16,7 @@
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, .2);
     border-radius: 3px;
-    display: table;
+    display: table-cell;
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
@@ -26,37 +26,37 @@
   &__left {
     width: 33.333333%;
     height: 100%;
-    // background-color: orangered;
     display: table-cell;
-  }
+    
+    // .popup__img1 {
+    //   display: table-cell;
+    //   height: 250px;
+    //   background-image: 
+    //   linear-gradient(to right bottom, $color-primary, $color-primary-light),
+    //   url(../img/nat-5.jpg);
+    //   float: left;
+      
+    //   &::after {
+    //     content: "";
+    //     display: block;
+    //     clear: both;
+    //   }
+    // }
+    
+    // .popup__img2 {
+    //   display: table-cell;
+    //   background-image: 
+    //     linear-gradient(to right bottom, $color-primary, $color-primary-light),
+    //     url(../img/nat-5.jpg);
+    //   height: 50%;
+    //   float: left;
 
-  &__img1 {
-    height: 50%;
-    background-image: 
-        linear-gradient(to right bottom, $color-primary, $color-primary-light),
-        url(../img/nat-5.jpg);
-    float: left;
-
-    &::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-  }
-
-  &__img2 {
-        background-image: 
-        linear-gradient(to right bottom, $color-primary, $color-primary-light),
-        url(../img/nat-5.jpg);
-    height: 50%;
-    // display: inline-block;
-    float: left;
-
-    &::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
+    //   &::after {
+    //     content: "";
+    //     display: block;
+    //     clear: both;
+    //   }
+    // }
   }
 
   &__right {

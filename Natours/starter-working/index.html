@@ -84,17 +84,17 @@
                                  https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
                             -->
                             <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
-                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                                  alt="photo 1"
                                  class="composition__photo composition__photo--p1"
                                  src="img/nat-1-large.jpg">
                             <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
-                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                                  alt="photo 2"
                                  class="composition__photo composition__photo--p2"
                                  src="img/nat-2-large.jpg">
                             <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
-                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                                  alt="photo 3"
                                  class="composition__photo composition__photo--p3"
                                  src="img/nat-3-large.jpg">
@@ -408,10 +408,24 @@
         <div class="popup" id="popup">
             <div class="popup__content">
                 <div class="popup__left">
+                    <!-- `srcset` specifies different sources and their widths in pixels (300w and 1000w respectively),
+                    - `sizes`
+                    1) gives media query breakpoints (e.g. `max-width: 900px`)
+                    2) the estimated percentage of the total width at the media query that the image will occupy (e.g. if image is 171px
+                    wide and 900px is `max-width` = `20vw` (171/900 = .20))
+                    3) and the default if none of the other widths apply (e.g. 300px)
+                    - `src` is the default for old browsers
+                    This tells the browser which image to use at which resolution.
+                    The "art direction" method is employed for the logo image in the footer.
+                    https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+                    -->
+                    <!-- <img srcset="img/nat-8.jpg 300w, img/nat-8-large.jpg 1000w"
+                         sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="photo 1"
+                         class="popup__img" src="img/nat-8-large.jpg">-->
                     <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
                     <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
-                    <!-- <div alt="Tour photo" class="popup__img1">hello</div>
-                    <div alt="Tour photo" class="popup__img2">world</div> -->
+                    <!-- <div alt="Tour photo" class="popup__img1"></div> -->
+                    <!-- <div alt="Tour photo" class="popup__img2"></div> -->
                 </div>
                 <div class="popup__right">
                     <a href="#section-tours" class="popup__close">&times;</a>

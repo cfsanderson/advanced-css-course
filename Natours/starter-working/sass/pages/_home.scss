@@ -15,9 +15,19 @@
     rgba($color-primary-light, 0.8),
     rgba($color-primary-dark, 0.8)),
     url(../img/nat-4.jpg);
-    // background-size: cover;
+    background-size: cover;
     transform: skewY(-7deg);
     margin-top: -10rem;
+
+  // When res is > 192dpi (retina 2x) AND the width is > 600px this will apply
+  // OR when width is > 2000px, show the larger image
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url(../img/nat-4-large.jpg);
+  }
 
   & > * {
     transform: skewY(7deg);

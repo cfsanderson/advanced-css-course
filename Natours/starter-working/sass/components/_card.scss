@@ -58,24 +58,45 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
+      // normal
       background-image: 
         linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
         url(../img/nat-5.jpg);
+
+      // When res is > 192dpi AND the width is > 600px this will apply (192 is the retina standard)
+      // OR when width is > 2000px, show the larger image
+      @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        background-image: 
+          linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+          url(../img/nat-5-large.jpg);
+      }
     }
     
     &--2 {
       background-image: 
-        linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
-        url(../img/nat-6.jpg);
+      linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+      url(../img/nat-6.jpg);
+      
+      @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        background-image: 
+          linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+          url(../img/nat-6-large.jpg);
+      }
     }
     
     &--3 {
       background-image: 
-        linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
-        url(../img/nat-7.jpg);
+      linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+      url(../img/nat-7.jpg);
+
+      @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        background-image: 
+          linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+          url(../img/nat-7-large.jpg);
+      }
     }
   }
-
+  
   &__heading {
     font-size: 2.8rem;
     font-weight: 300;
