@@ -297,3 +297,20 @@ The "art direction" method is employed for the logo image in the footer.
 #### Responsive images in CSS (lecture 63)
 This technique uses media queries to choose 
 (see _header.scss for example code - line 14)
+
+
+### lecture 65 - Setting up a Simple Build Process with NPM Scripts
+- `npm install concat --save-dev`
+- add to package.json
+```json
+"scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-fonts.css css/style.comp.css",
+  },
+```
+- `npm run concat:css`
+- `npm install autoprefixer --save-dev`
+- `npm install postcss-cli --save-dev`
+
+stopped at 10:24
