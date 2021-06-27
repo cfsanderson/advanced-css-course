@@ -109,3 +109,90 @@ The goal is to get the root font-size to 10px so that you can easily convert all
 Since it's bad practice to explicity overwrite the base font size in px, percentages are better and allow users to zoom or set base size explicitly and everything will adjust.
 62.5% turns 16px (the default font-size for all browsers) into 10px.
 
+## #18 The Visual Formatting Model
+
+1) box model
+- fill area includes content plus padding and margin but not border - for background images or color
+- when defining the width or height of something, by default CSS does not include the padding, margin, or border.
+  - e.g. div with padding 20px and content area of 100px wide would actually end up as 140px wide.
+  - this is fixed with `box-sizing: border-box;` which includes padding and margin in overall width or height. The abover example is now 100px wide.
+
+2) box types: inline, block-level, and inline-block
+
+- **Block-level boxes**
+  - elements formatted visually as blocks
+  - 100% of parent's width
+  - Verically, one after another
+  - Box-model applies as showed
+    - `display: block;` also...
+      - `display: flex;`
+      - `display: inline-flex;`
+      - `display: table;`
+
+- **Inline-block boxes**
+  - A mix of block and inline
+  - Occupies only content's space
+  - No line-breaks
+  - Box-model applies as showed
+    - `display: inline-block;`
+
+- **Inline boxes**
+  - Content is distributed in lines
+  - Occupies only content's space
+  - No line-breaks
+  - No heights and widths
+  - Padding and margins only horizontal (left and right)
+    - `display: inline;`
+
+3) Positioning Schemes: Normal flow, absolute positioning, and floats
+
+- **Normal flow**
+  - Default positioning scheme;
+  - NOT floated;
+  - NOT absolutely positioned;
+  - Elements laid out accouding to their source order.
+    - Default
+    - `position: relative;`
+- **Floats**
+  - Element is removed from the normal flow;
+  - Text and inline elements will wrap around the floated element;
+  - the container will not adjust it's height to the element.
+    - `float: left;`
+    - `float: right;`
+- **Absolute positioning**
+  - Element is removed from the normal flow;
+  - NO impact on surrounding content or elements;
+  - We use `top`, `bottom`, `left`, and `right` to offset the element from its relatively positioned container.
+    - `position: absolute;`
+    - `position: fixed;`
+
+4) Stacking Contexts
+(like layers in Photoshop)
+- `z-index` is one way to create stacking contexts but also opacity value, transition property, etc can also change.
+
+## #19 The Think - Build - Architect Mindset
+- think about the layout
+- build with good CSS and markup - meaningful class names (BEM)
+- architect with good file and folder organization
+
+Component-driven Design
+- modular building blocks
+- held together by the layout of the percentages
+- re-usable across a project and even between diff projects
+- Independent, allowing us to use them anywhere on the page.
+[e.g. ATOMIC DESIGN]
+
+### BEM - Block Element Modifier
+- BLOCK: standalone component that is meaningful on its own. `.block {}`
+- ELEMENT: part of a block that has no standalone meaning. `.block__element {}`
+- MODIFIER: a diff version of a block or an element. `.block__element--modifier {}` or `.block__element--modifier--modifiers {}` 
+
+ ### The 7-1 Pattern
+ - 7 different folders for partial Sass files, and 1 main Sass file to import all other files into a compiled CSS stylesheet
+   - `base/`
+   - `components/`
+   - `layout/`
+   - `pages/`
+   - `themes/`
+   - `abstracts/`
+   - `vendors/`
